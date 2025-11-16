@@ -1,51 +1,58 @@
 /******************
-Name:
-ID:
-Assignment:
+Name: Mazal Mamou
+ID: mamouma
+Assignment: ex1
 *******************/
-#include <stdio.h>
 
-// REMIDER : YOU CANT USE ANY CONTROL FLOW OPERATIONS OR FUNCTIONS, ONLY BITWISE. not even "==, &&, ||, !="
+
+#include <stdio.h>
 
 int main()
 {
+    // Task 1 : Ascii
+  char character;  // define the data type and the variable
+  printf("\nAscii:\n"); // Title
+printf("Please enter a character: "); // instruction to the user
+scanf ("%c", &character);
+// asking the user to enter a character that will later refer to the variable that we define in the beginning
+  printf("It's numerical value is : %d\n", character); //giving the numerical value from ascii table of his input
+    printf("0 for even, 1 for odd: %d\n",(character&1) ); // defining if its even or odd
 
-    // Ascii
-    printf("Ascii:\n");
-    /*. Scan one character from the user.
-        Then, refer to it as an integer.
-        a. Print its value.
-        b:
-        Print “0”, if its integer representation is even.
-        print “1” if its integer representation is odd. */
+   // Task 2 :  2's complement and other representations
+   int number=0; // Defining variable
+    printf("\n\n2's complement to other representations:\n"); //Title
+    printf("Please enter a negative integer : ");// instruction to the user
+    scanf("%d", &number); // asking the user to enter an integer that will be the value of our variable
+    printf("1's complement : %d\n", -(~number));// giving the 1's complement of the input
+    printf("Unsigned : %u\n", number); //giving the unsign value of the input
 
-    // 2's complement and other representations
-    printf("\n2's complement to other representations:\n");
-    /*. Scan a negative integer. [2’s complement].
-        Print its value in 1’s complement.
-        Print its value as unsigned. */
+// Task 3 : Shifting right and left
+int first, second, third, result; // defining variables
+    printf("\nShifting right and left\n"); // Title
+    printf("please enter 3 integers : "); // instructions to the user
+    scanf("%d%d%d", &first, &second, &third); // asking the user to enter 3 integers who's gonna be the values of the variables : first second and third
+    result=first>>second<<third; // calculating the shiftings
+    printf("After shifting right and left : %d\n", result); // final result
 
-    // Shifting right and left
-    printf("\nShifting right and left:\n");
-    /*. Scan 3 integers.
-        The first one - the value you will play with.
-        The second and the third - how much to shift right and left, respectively.
-        Print the value after shifting right and then shifting left. */
+    // Task 4 : even and odd
+    int one, two, three;
+    printf("\nEven and Odd");
+    printf("\nplease enter 3 integers : "); // instructions to the user
+    scanf("%d%d%d", &one, &two, &three);
+    // asking the user to enter 3 integers who's gonna be the values of the variables : one, two and three
+    printf("0 - most of them are even, 1 - most of them are odd: %d\n",(one&1)&(two&1)|(one&1)&(three&1)|(two&1)&(three&1) ); // defining if the most is even or odd
 
-    // Even - Odd
-    printf("\nEven - Odd:\n");
-    /* Scan 3 Integers.
-    If at least two of them are even - print 0.
-    If at least two of them are odd - print 1. */
+    // Task 5 : Different Bases
+    int octalNumber, hexNumber, ocNumMSB, hexNumMSB;
+    printf("\nDifferent bases\n");
+    printf("Please enter 2 numbers in octal and hexadecimal bases : ");
+    scanf("%o%x", &octalNumber, &hexNumber);
+    printf("\nLSBs : %d, %d",octalNumber&1, hexNumber&1);
+    ocNumMSB=octalNumber>>31;
+    hexNumMSB=hexNumber>>31;
+    printf("\nMSBs : %d, %d", ocNumMSB,hexNumMSB);
 
-    // Different Bases
-    printf("\nDifferent Bases:\n");
-    /*  Scan two numbers:
-        One in octal base, one in Hexadecimal base.
-        Print their LSB’s.
-        Print their MSB’s. */
-
-    printf("Bye!\n");
+    printf("\n\nBye!\n");
 
     return 0;
-}
+     }
