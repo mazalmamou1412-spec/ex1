@@ -26,7 +26,7 @@ printf("Please enter a character: \n");
 
 
 
-    
+
    // Task 2 :  2's complement and other representations
     
 // defining variable
@@ -44,14 +44,14 @@ printf("Please enter a character: \n");
 
 
 
-
     
 // Task 3 : Shifting right and left
 
  // defining variables   
 int first, second, third, result;
     printf("\nShifting right and left\n");
-    // asking the user to enter 3 integers who's gonna be the values of the variables : first second and third    
+
+    //instructions to the user to collect the values of the variables : "first" "second" and "third"
     printf("please enter 3 integers : \n"); 
     scanf("%d%d%d", &first, &second, &third); 
     
@@ -62,22 +62,23 @@ int first, second, third, result;
     
     
     
-    
     // Task 4 : even and odd
 
     //defining variables
     int one, two, three;
     printf("\nEven and Odd");
 
-     /instructions to the user to collect the values of the variables : "one", "two" and "three"
-    printf("\nplease enter 3 integers : "); 
+     //instructions to the user to collect the values of the variables : "one", "two" and "three"
+    printf("\nplease enter 3 integers : \n");
     scanf("%d%d%d", &one, &two, &three);
 
     // defining if the most is even or odd
-    printf("0 - most of them are even, 1 - most of them are odd: %d\n",(one&1)&(two&1)|(one&1)&(three&1)|(two&1)&(three&1) ); 
+    printf("0 - most of them are even, 1 - most of them are odd: %d\n",
+           ((one&1)&(two&1)) |
+           ((one&1)&(three&1)) |
+           ((two&1)&(three&1))
+           );
 
- 
-    
     
     
     
@@ -88,7 +89,7 @@ int first, second, third, result;
     printf("\nDifferent bases\n");
 
     // instructions to the user to collect the values of : "octalNumer" and "hexNumber"
-    printf("Please enter 2 numbers in octal and hexadecimal bases : ");
+    printf("Please enter 2 numbers in octal and hexadecimal bases : \n");
     scanf("%o%x", &octalNumber, &hexNumber);
 
     //calculating and printing the LSBs and MSBs of the previous inputs
@@ -96,6 +97,7 @@ int first, second, third, result;
     ocNumMSB=octalNumber>>31;
     hexNumMSB=hexNumber>>31;
     printf("\nMSBs : %d, %d", ocNumMSB,hexNumMSB);
+
 
     printf("\n\nBye!\n");
 
