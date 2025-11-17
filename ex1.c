@@ -10,26 +10,40 @@ Assignment: ex1
 int main()
 {
     // Task 1 : Ascii
-  char character;  // define the data type and the variable
-  printf("\nAscii:\n"); // Title
-printf("Please enter a character: "); // instruction to the user
-scanf ("%c", &character);
-// asking the user to enter a character that will later refer to the variable that we define in the beginning
-  printf("It's numerical value is : %d\n", character); //giving the numerical value from ascii table of his input
-    printf("0 for even, 1 for odd: %d\n",(character&1) ); // defining if its even or odd
+    
+// define the data type and the variable
+    char character;  
+  printf("\nAscii:\n");
+    // Instructions to the user
+printf("Please enter a character: \n"); 
+    // asking the user to enter a character that will later be the value of the variable "character"
+    scanf ("%c", &character);
+    //giving the numerical value from ascii table of the input
+    printf("It's numerical value is : %d\n", character); 
+    // defining if the numerical value of the input is even or odd
+    printf("0 for even, 1 for odd: %d\n",(character&1) ); 
 
    // Task 2 :  2's complement and other representations
-   int number=0; // Defining variable
-    printf("\n\n2's complement to other representations:\n"); //Title
-    printf("Please enter a negative integer : ");// instruction to the user
-    scanf("%d", &number); // asking the user to enter an integer that will be the value of our variable
-    printf("1's complement : %d\n", -(~number));// giving the 1's complement of the input
-    printf("Unsigned : %u\n", number); //giving the unsign value of the input
+    
+// defining variable
+   int number=0; 
+    printf("\n\n2's complement to other representations:\n"); 
+   // instruction
+    printf("Please enter a negative integer : \n");
+// asking the user to enter an integer that will be the value of the variable "number"
+    scanf("%d", &number); 
+    // calculating the 1's complement value of the input
+    printf("1's complement : %d\n", -(~number));
+    // calculating the unsigned value of the input
+    printf("Unsigned : %u\n", number);
 
 // Task 3 : Shifting right and left
-int first, second, third, result; // defining variables
-    printf("\nShifting right and left\n"); // Title
-    printf("please enter 3 integers : "); // instructions to the user
+
+ // defining variables   
+int first, second, third, result;
+    printf("\nShifting right and left\n");
+    // instructions 
+    printf("please enter 3 integers : \n"); 
     scanf("%d%d%d", &first, &second, &third); // asking the user to enter 3 integers who's gonna be the values of the variables : first second and third
     result=first>>second<<third; // calculating the shiftings
     printf("After shifting right and left : %d\n", result); // final result
